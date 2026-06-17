@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHẬP KEY - LiveCHU Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo-small">
+                <span class="icon">✅</span>
+                LIVECHU
+            </div>
+            <div class="brand-name">Key Checker</div>
+            <span class="badge-checker">FILE NHẬP KEY</span>
+        </div>
+
+        <!-- TELEGRAM BUTTON -->
+        <div class="telegram-section">
+            <a href="https://zalo.me/0776307956" target="_blank" class="telegram-btn">
+                <span class="tg-icon">✈️</span>
+                LIÊN HỆ ZALO
+            </a>
+            <div class="tg-note">📌 Liên hệ Admin để được duyệt key nhanh</div>
+        </div>
+
+        <!-- THÔNG BÁO -->
+        <div class="notification-banner" id="notificationBanner">
+            <span class="icon-warning">⚠️</span>
+            <span class="message">
+                <strong>LƯU Ý:</strong> KEY CẦN <strong>ADMIN DUYỆT</strong> MỚI CÓ THỂ SỬ DỤNG. VUI LÒNG NHẬP KEY VÀ CHỜ DUYỆT.
+            </span>
+            <button class="btn-close" id="btnCloseNotification" title="Đóng">✕</button>
+        </div>
+
+        <!-- NHẬP KEY -->
+        <div>
+            <div class="section-title">⚠️ BẢN LƯU Ý</div>
+            <div class="input-box">
+                <div class="warning-text">
+                    🔑 <strong>Nhập key:</strong> Dán key từ <span class="highlight">FILE FREE</span><br>
+                    👤 <strong>Nhập ID người dùng</strong> để Admin duyệt<br>
+                    ⏳ Key sẽ có hiệu lực <strong>sau khi được Admin duyệt</strong>
+                </div>
+                
+                <div class="key-input-group">
+                    <input type="text" id="keyInput" placeholder="Nhập key vào đây..." autocomplete="off">
+                    <button class="btn btn-activate" id="btnActivate">GỬI DUYỆT</button>
+                    <button class="btn btn-delete" id="btnDelete">XOÁ</button>
+                </div>
+
+                <div class="user-id-group">
+                    <label>👤 ID Người Dùng (Tên / Email / SĐT):</label>
+                    <input type="text" id="userIdInput" placeholder="Nhập ID của bạn..." autocomplete="off">
+                </div>
+                
+                <div class="status-message" id="statusMessage"></div>
+            </div>
+        </div>
+
+        <!-- THÔNG TIN KEY ĐANG ACTIVE -->
+        <div class="active-key-info" id="activeKeyInfo">
+            <div class="active-label">✅ KEY ĐANG HOẠT ĐỘNG</div>
+            <div class="info-row">
+                <span class="info-label">👤 Người dùng:</span>
+                <span class="info-value" id="infoUser">---</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">🔑 Key:</span>
+                <span class="info-value" id="infoKey">---</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">📌 Loại:</span>
+                <span class="info-value" id="infoType">---</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">⏰ Hết hạn:</span>
+                <span class="info-value" id="infoExpiry">---</span>
+            </div>
+            <div class="countdown" id="countdown"></div>
+        </div>
+
+    </div>
+
+    <div class="toast" id="toast" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
